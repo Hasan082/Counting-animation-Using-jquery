@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter-container {
+            overflow: hidden;
+        }
+
+        .counter-container {
+            padding-top: 150vh !important;
+            padding-bottom: 150vh !important;
+        }
+
+        .counter {
+            font-size: 120px;
+            line-height: 100px;
+            text-align: center;
+            transition: opacity 1s ease-in-out;
+            opacity: 1;
+        }
+
+        .counter-container {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-container">
+        <div class="counter">1997</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="countinganimation.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.counter').counterAnimation({
+                startValue: 1997,
+                endValue: 2022,
+                increment: 1,
+                holdTime: 5000,
+                duration: 100
+            });
+        });
+    </script>
+</body>
+
+</html>
